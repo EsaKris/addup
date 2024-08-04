@@ -70,6 +70,7 @@ app.post('/submit', (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+const PORT = process.env.PORT || 3000; // Fallback to 3000 if PORT is not set
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
